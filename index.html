@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+
+<!-- 	<base href="/" /> -->
+
+	<title>Space</title>
+	<meta name="description" content="X-Formation Statistics App With Some Bootstrap Data">
+	<meta name="author" content="Paulskr">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+	<!-- Boostrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Font-Awesome CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="css/main.css">
+
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+<!-- Header -->
+<header>
+	<nav class="navbar navbar-inverse">
+		<div ng-controller="navClass" class="container">
+			<!--headerMain_Ctrl-->
+			<div class="navbar-header" ng-controller="headerMain">
+				<a href="#!/"><img ng-src="{{logo}}" /></a>
+				<button ng-click="toggleClass()" type="button" class="navbar-toggle collapsed">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!--#headerMain_Ctrl-->
+			<div ng-class="class" id="navbar" class="navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#!/about">About</a></li>
+					<li><a href="#!/repositories">Repositories</a></li>
+					<li><a href="#!/contributors">Contributors</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<!-- Main Content -->
+<div id="main_content">
+	<!-- angular templating -->
+	<ng-view></ng-view>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+	<div class="main_footer">
+		<p>Space © 2018 By Skr</p>
+	</div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.js"></script>
+<script src="js/main.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.js"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-mocks.js"></script>-->
+</body>
+
+</html>
+
+

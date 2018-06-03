@@ -1,0 +1,51 @@
+<section class="repo_section">
+	<div class="container">
+		<div class="jumbotron text-center">
+		    <div class="page-header">
+		  		<h1>Repositories</h1>
+					<img src="{{gitName.avatar_url}}" />
+					<h2>{{gitName.name}}</h2>
+		  		<a href="{{gitName.html_url}}" class="btn btn-default" target="_blank">
+		        <i class="fa fa-github" aria-hidden="true"></i>
+		        GitHub {{gitName.name}}
+			    </a>
+				</div>
+			<div ng-hide="gitName" class="preload_text"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>LOADING...</div>
+		</div>
+
+		<form>
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search repositories" ng-model="search.name">
+			</div>
+		</form>
+		<div class="list-group">
+
+			<!-- Loop Repositories -->
+			<div class="list-group-item animate-repeat clearfix" ng-repeat="gitRepos in gitRepo | orderBy:'name' | filter:search">
+				<div class="col-md-9">
+					<div class="descr_pero">
+						<h2>
+							<span ng-show="gitRepos.fork" class="fa fa-code-fork"></span>
+	           	<span ng-show="!gitRepos.fork" class="fa fa-archive"></span>
+	            <a href="{{gitRepos.html_url}}" class="descr_pero_name" target="_blank">{{gitRepos.name}}</a>
+						</h2>
+						<p class="bg-meta"><i class="fa fa-star"></i>{{gitRepos.stargazers_count}}</p>
+						<p ng-show="!gitRepos.language == false" class="bg-meta"><i class="fa fa-circle"></i>{{gitRepos.language}}</p>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<ul class="list_date">
+						<li><b>Created at:</b>  <i>{{gitRepos.created_at | date : short : timezone}}</i></li>
+						<li><b>Updated at:</b>  <i>{{gitRepos.updated_at | date : short : timezone}}</i></li>
+						<li><b>Pushed at:</b>  <i>{{gitRepos.pushed_at | date : short : timezone}}</i></li>
+					</ul>
+				</div>
+			</div>
+
+			<!-- Loop Preloader -->
+			<div ng-hide="gitRepo" class="preload_text"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+				<span>LOADING...</span>
+			</div>
+		</div>
+	</div>
+</section>

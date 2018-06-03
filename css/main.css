@@ -1,0 +1,449 @@
+@import "../css/sprites.css";
+/* Path to sprites */
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+/* Prefix */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  font-weight: normal;
+}
+b,
+strong {
+  font-weight: bold;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Reset */
+html {
+  position: relative;
+  min-height: 100%;
+}
+/* Body */
+body {
+  background-color: #f1f1f1;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 60px;
+}
+::selection {
+  background: #333333;
+  color: #fff;
+}
+::-moz-selection {
+  background: #333333;
+  color: #fff;
+}
+/* Header styles */
+header .navbar {
+  border: none;
+  margin: 0;
+  border-radius: 0;
+  background-color: #fff;
+}
+header .navbar .navbar-header {
+  width: 172px;
+  margin-right: 33px;
+  padding: 10px 0 0 0;
+}
+header .navbar .navbar-header a {
+  display: block;
+}
+header .navbar #navbar {
+  float: left;
+}
+header .navbar #navbar .navbar-nav li a {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+header .navbar #navbar .navbar-nav li a:focus {
+  background: #ccc;
+}
+header .navbar #navbar .navbar-nav li a:hover {
+  color: #000;
+}
+/* Main-Additional Content styles */
+#main_content {
+  /* GitHub Repository style */
+  /* Preloader */
+}
+#main_content .main_section .page-header,
+#main_content .contr_section .page-header,
+#main_content .repo_section .page-header {
+  border: none;
+}
+#main_content .main_section .page-header h1,
+#main_content .contr_section .page-header h1,
+#main_content .repo_section .page-header h1 {
+  margin: 0 0 30px 0;
+}
+#main_content .main_section .page-header h2,
+#main_content .contr_section .page-header h2,
+#main_content .repo_section .page-header h2 {
+  font-size: 35px;
+  margin: 0 0 20px 0;
+}
+#main_content .main_section .page-header h4,
+#main_content .contr_section .page-header h4,
+#main_content .repo_section .page-header h4 {
+  margin: 0 0 15px 0;
+}
+#main_content .main_section .page-header p,
+#main_content .contr_section .page-header p,
+#main_content .repo_section .page-header p {
+  line-height: 27px;
+}
+#main_content .main_section .page-header .btn,
+#main_content .contr_section .page-header .btn,
+#main_content .repo_section .page-header .btn {
+  font-size: 16px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+#main_content .main_section .page-header img,
+#main_content .contr_section .page-header img,
+#main_content .repo_section .page-header img {
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#main_content .main_section {
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+}
+#main_content .main_section .jumbotron {
+  background: none;
+}
+#main_content .main_section .jumbotron .page-header h1,
+#main_content .main_section .jumbotron .page-header h4,
+#main_content .main_section .jumbotron .page-header p {
+  color: #fff;
+}
+#main_content .repo_section .list-group {
+  margin-bottom: 60px;
+}
+#main_content .repo_section .list-group .list-group-item .col-md-9 .descr_pero h2 {
+  margin-bottom: 15px;
+}
+#main_content .repo_section .list-group .list-group-item .col-md-9 .descr_pero h2 .descr_pero_name {
+  font-size: 22px;
+}
+#main_content .repo_section .list-group .list-group-item .col-md-9 .descr_pero i {
+  padding: 0 5px 0 0;
+}
+#main_content .repo_section .list-group .list-group-item .col-md-3 .list_date {
+  font-size: 13px;
+}
+#main_content .repo_section .list-group .list-group-item .col-md-3 .list_date li {
+  margin-bottom: 8px;
+}
+#main_content .contr_section .page-header .table thead tr th span {
+  cursor: pointer;
+}
+#main_content .preload_text {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+#main_content .preload_text i {
+  vertical-align: middle;
+}
+#main_content .preload_text span {
+  display: inline-block;
+}
+/* Some Animations Css */
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  filter: alpha(opacity=0);
+  max-height: 0;
+}
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  -webkit-opacity: 1;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+  filter: alpha(opacity=100);
+  max-height: 30px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+}
+footer .main_footer {
+  text-align: center;
+  padding: 20px 0 0 0;
+  color: #000;
+}
+/* Media Query */
+@media only screen and (max-width: 768px) {
+  body header .navbar .navbar-header {
+    margin: 0 auto;
+    padding: 0;
+    width: 222px;
+    text-align: center;
+  }
+  body header .navbar .navbar-header img {
+    display: inline;
+  }
+  body header .navbar .navbar-header .navbar-toggle {
+    margin: 15px;
+  }
+  body header .navbar .navbar-header .navbar-toggle:focus,
+  body header .navbar .navbar-header .navbar-toggle:hover {
+    background-color: #38404f;
+  }
+  body header .navbar .navbar-header .navbar-toggle:focus span,
+  body header .navbar .navbar-header .navbar-toggle:hover span {
+    background: #ffffff;
+  }
+  body header .navbar .navbar-header .navbar-toggle span {
+    background: #38404f;
+  }
+  body header .navbar .navbar-header button {
+    float: none;
+  }
+  body header .navbar #navbar {
+    float: none;
+    visibility: visible;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transform: translate(0px, 0px);
+    -moz-transform: translate(0px, 0px);
+    -o-transform: translate(0px, 0px);
+    -ms-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    -webkit-opacity: 1;
+    opacity: 1;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+    filter: alpha(opacity=100);
+    height: 200px;
+  }
+  body header .navbar #navbar.addclass {
+    visibility: hidden;
+    height: 0;
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    -webkit-opacity: 0;
+    opacity: 0;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+    filter: alpha(opacity=0);
+    -webkit-transform: translate(-5000px, 0px);
+    -moz-transform: translate(-5000px, 0px);
+    -o-transform: translate(-5000px, 0px);
+    -ms-transform: translate(-5000px, 0px);
+    transform: translate(-5000px, 0px);
+  }
+  body #main_content .main_section h1,
+  body #main_content .contr_section h1,
+  body #main_content .repo_section h1 {
+    font-size: 40px;
+  }
+  body #main_content .repo_section .page-header h2 {
+    font-size: 22px;
+  }
+  body #main_content .repo_section .list-group .list-group-item .col-md-9 {
+    margin-bottom: 20px;
+  }
+}
+/* Attrs */
+/* Other GLOBALS */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.bg-meta {
+  font-size: 12px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.bg-meta .fa-circle {
+  color: #f35f32;
+}
+form .form-group .form-control {
+  height: 45px;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
+}
+.tal {
+  text-align: left;
+}
+.pr {
+  position: relative;
+}
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+.clear {
+  clear: both;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
